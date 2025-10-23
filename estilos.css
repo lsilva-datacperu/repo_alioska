@@ -1,0 +1,151 @@
+/* Configuración global y fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 700;
+    color: #335b71; /* Un azul profundo y sereno */
+    margin-bottom: 20px;
+}
+
+/* Encabezado (Hero) */
+.hero {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hero-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Imagen de perfil circular */
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+
+.hero .dates {
+    font-size: 1.1rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* Sección de Semblanza */
+.semblanza {
+    padding: 40px 0;
+}
+
+.semblanza h2 {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.semblanza p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify; /* Justificamos el texto para un look elegante */
+}
+
+/* Galería de Fotos */
+.gallery {
+    padding: 20px 0 40px;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Cuadrícula responsive: 3 columnas en grande, 2 en mediano, 1 en pequeño */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03); /* Efecto sutil al pasar el mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-style: italic;
+}
+
+/* --- Animaciones --- */
+
+/* Estado inicial (oculto) */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado final (visible) */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Responsividad para móviles --- */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .semblanza h2, .gallery h2 {
+        font-size: 1.8rem;
+    }
+
+    .semblanza p {
+        font-size: 1rem;
+    }
+}
